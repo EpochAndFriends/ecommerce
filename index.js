@@ -1,25 +1,26 @@
-// Obtiene todos los contenedores de planetas
-const planetContainers = document.querySelectorAll('.planet-container');
+// Obtener una referencia al elemento de descripción
+const descripcionPlaneta = document.getElementById('descripcion-planeta');
 
-// Añade un controlador de eventos a cada contenedor de planeta
-planetContainers.forEach((container) => {
-  let clickCount = 0;
+// Agregar un evento de clic al documento
+document.addEventListener('click', function(event) {
+  // Verificar si el clic ocurrió fuera del elemento de descripción
+  if (!descripcionPlaneta.contains(event.target)) {
+    // Si el clic fue fuera del elemento, ocultar la descripción
+    descripcionPlaneta.style.display = 'none';
+  }
+});
 
-  container.addEventListener('click', (event) => {
-    event.preventDefault();
+// Obtener una referencia a todos los elementos de planeta
+const planetas = document.querySelectorAll('.planeta');
 
-    clickCount++;
+// Agregar un evento de clic a cada elemento de planeta
+planetas.forEach(function(planeta) {
+  planeta.addEventListener('click', function() {
+    // Obtener el atributo "data-descripcion" del planeta seleccionado
+    const descripcion = planeta.getAttribute('data-descripcion');
 
-    if (clickCount === 1) {
-      // Hacer zoom en el planeta (agregar la lógica necesaria)
-      container.classList.add('zoomed');
-      const planetInfo = container.querySelector('.planet-info');
-      planetInfo.style.display = 'block';
-    } else if (clickCount === 2) {
-      // Redireccionar al usuario a otro link
-      const link = container.querySelector('a');
-      const destination = link.getAttribute('href');
-      window.location.href = destination;
-    }
+    // Actualizar la descripción del planeta
+    descripcionPlaneta.textContent = descripcion;
+    descripcionPlaneta.style.display = 'block';
   });
 });

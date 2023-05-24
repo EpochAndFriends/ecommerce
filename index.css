@@ -70,6 +70,13 @@
   z-index: 1; /* Añade un índice de apilamiento */
 }
 
+.planet-container:nth-child(8) {
+  position: absolute;
+  top: 461px;
+  left: 1190px;
+  z-index: 1; /* Añade un índice de apilamiento */
+}
+
 
 /* Estilos para el contenedor de la Vía Láctea */
 .galaxy-container {
