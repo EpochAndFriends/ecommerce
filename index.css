@@ -36,7 +36,7 @@
 /* Estilos para los contenedores de los planetas */
 .planet-container:nth-child(3) {
   position: relative;
-  top: 360px;
+  top: 361px;
   left: 1190px;
   z-index: 1; /* Añade un índice de apilamiento */
 }
