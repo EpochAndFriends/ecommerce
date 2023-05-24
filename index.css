@@ -39,6 +39,8 @@
   position: absolute;
   top: 461px;
   left: 1190px;
+  max-width: 1px;
+  max-height: 1px;
   z-index: 1; /* Añade un índice de apilamiento */
 }
 
