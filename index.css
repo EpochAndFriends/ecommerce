@@ -34,28 +34,36 @@
 }
 
 /* Estilos para los contenedores de los planetas */
+
 .planet-container:nth-child(3) {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 1; /* Añade un índice de apilamiento */
+}
+
+.planet-container:nth-child(4) {
   position: relative;
   top: 361px;
   left: 1190px;
   z-index: 1; /* Añade un índice de apilamiento */
 }
 
-.planet-container:nth-child(4) {
+.planet-container:nth-child(5) {
   position: absolute;
   top: 650px;
   left: 800px;
   z-index: 1; /* Añade un índice de apilamiento */
 }
 
-.planet-container:nth-child(5) {
+.planet-container:nth-child(6) {
   position: absolute;
   top: 580px;
   left: 1000px;
   z-index: 1; /* Añade un índice de apilamiento */
 }
 
-.planet-container:nth-child(6) {
+.planet-container:nth-child(7) {
   position: absolute;
   top: 650px;
   left: 520px;
@@ -64,17 +72,8 @@
 
 .planet-container:nth-child(8) {
   position: absolute;
-  top: 100px;
-  left: 10px;
-  height: 1px;
-  width: 1px;
-  z-index: 1; /* Añade un índice de apilamiento */
-}
-
-.planet-container:nth-child(7) {
-  position: relative;
-  top: 360px;
-  left: 1190px;
+  top: 10px;
+  left: -1000px;
   z-index: 1; /* Añade un índice de apilamiento */
 }
 
