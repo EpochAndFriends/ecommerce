@@ -55,6 +55,32 @@ html, body {
     left: 660px;
   }
   
+  @media (max-width: 767px) {
+    /* Estilos para pantallas de hasta 767px de ancho */
+    .selector {
+      width: 200px; /* Ajusta el ancho del selector en pantallas más pequeñas */
+      height: 300px; /* Ajusta la altura del selector en pantallas más pequeñas */
+    }
+  
+    .selector1 {
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .selector2 {
+      top: 500px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .selector3 {
+      top: 800px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
   .selector:hover {
     border-color: #fff; /* Color para resaltar el borde */
   }
