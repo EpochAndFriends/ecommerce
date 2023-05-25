@@ -45,21 +45,21 @@ function handleTouch() {
   });
 
   if (touchDuration < 300) {
-    // Muestra la descripción y hace zoom en el planeta seleccionado con un toque rápido
-    const container = event.target.closest('.planet-container');
-    container.classList.add('zoomed');
-    const planetInfo = container.querySelector('.planet-info');
-    planetInfo.style.display = 'block';
-  }
-}
-
-function handleClick() {
-  if (clickCount === 2) {
-    // Redirecciona al usuario a otra página con un doble clic
+    // Redirecciona al usuario a otra página con un toque rápido
     const container = event.target.closest('.planet-container');
     const link = container.querySelector('a');
     const destination = link.getAttribute('href');
     window.location.href = destination;
+  }
+}
+
+function handleClick() {
+  if (clickCount === 1) {
+    // Muestra la descripción y hace zoom en el planeta seleccionado con un solo clic
+    const container = event.target.closest('.planet-container');
+    container.classList.add('zoomed');
+    const planetInfo = container.querySelector('.planet-info');
+    planetInfo.style.display = 'block';
   }
 }
 
@@ -80,3 +80,4 @@ function hideDescriptions() {
   touchEndTime = 0;
   clickCount = 0;
 }
+
