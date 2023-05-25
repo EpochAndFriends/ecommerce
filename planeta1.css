@@ -3,7 +3,8 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
   
   body {
@@ -14,20 +15,7 @@ html, body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-size: contain;
-  }
-  
-  
-  @media screen and (max-width: 767px) {
-    body {
-      background-size: cover;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    body {
-      background-size: 100% auto;
-    }
+    background-size: cover;
   }
   
   .container {
@@ -93,7 +81,6 @@ html, body {
     border-color: #fff;
     z-index: 1;
   }
-  
   
   .overlay {
     position: fixed;
@@ -176,23 +163,23 @@ html, body {
     .content {
       padding: 10px;
     }
-    
+  
     .content img {
       max-height: 200px;
     }
-    
+  
     .description {
       margin-top: 10px;
     }
-    
+  
     .description p {
       font-size: 14px;
     }
-    
+  
     .buttons {
       flex-direction: column;
     }
-    
+  
     .buttons button {
       margin: 5px;
     }
