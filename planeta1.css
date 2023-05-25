@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
   body {
@@ -57,7 +58,8 @@ html, body {
   .content {
     background-color: #fff;
     padding: 20px;
-    max-width: 600px; /* Ajusta el ancho máximo del marco según tus necesidades */
+    width: 90%; /* Ajusta el ancho del marco según tus necesidades */
+    max-width: 600px; /* Puedes seguir utilizando un ancho máximo si lo deseas */
     text-align: center;
   }
   
@@ -83,8 +85,6 @@ html, body {
     margin-top: 10px;
   }
   
-  
-  
   .description p {
     margin: 0;
     padding: 5px;
@@ -99,7 +99,7 @@ html, body {
   .buttons button {
     margin: 0 95px;
   }
-
+  
   .buttons {
     margin-top: 20px;
   }
@@ -118,3 +118,30 @@ html, body {
   .description .buttons .continue-button {
     order: 3;
   }
+  
+  @media (max-width: 600px) {
+    .content {
+      padding: 10px;
+    }
+    
+    .content img {
+      max-height: 200px;
+    }
+    
+    .description {
+      margin-top: 10px;
+    }
+    
+    .description p {
+      font-size: 14px;
+    }
+    
+    .buttons {
+      flex-direction: column;
+    }
+    
+    .buttons button {
+      margin: 5px;
+    }
+  }
+  
