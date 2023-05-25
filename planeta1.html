@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página con enlace</title>
+  <link rel="stylesheet" href="planeta1.css">
+</head>
+<body>
+  <div class="selector selector1"></div>
+  <div class="selector selector2"></div>
+  <div class="selector selector3"></div>
+
+  <div class="overlay" id="overlay" style="display: none;">
+    <div class="content">
+      <img src="" alt="Imagen desplegada" id="overlay-image" />
+      <div class="description">
+        <p id="overlay-description"></p>
+        <div class="buttons">
+            <button class="visit-button" onclick="visitPage()">Visitar</button>
+            <button class="continue-button" onclick="hideOverlay()">Seguir observando</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="planeta1.js"></script>
+</body>
+</html>
