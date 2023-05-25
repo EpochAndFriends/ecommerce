@@ -13,9 +13,22 @@ html, body {
     align-items: center;
     justify-content: center;
     overflow: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
     min-height: 100vh;
-    background-size: cover;
+    background-size: contain;
+    background-position: top left;
+  }
+  
+  @media screen and (max-width: 767px) {
+    body {
+      background-size: cover;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    body {
+      background-size: 100% auto;
+    }
   }
   
   .container {
