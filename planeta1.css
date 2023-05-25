@@ -7,14 +7,14 @@ html, body {
   
   body {
     background-image: url("fuego seleccion.png");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: auto; /* Habilita el desplazamiento */
+    overflow: auto;
   }
   
   .selector {
