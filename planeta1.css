@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: auto; /* Permitir scroll horizontal */
+    overflow-x: auto;
     overflow-y: hidden;
   }
   
@@ -16,13 +16,14 @@ html, body {
     justify-content: center;
     min-height: 100vh;
     background-size: cover;
-    background-attachment: fixed; /* Fijar la imagen de fondo por defecto */
+    background-attachment: fixed;
   }
   
   @media (max-width: 767px) {
     body {
-      background-attachment: scroll; /* Permitir scroll vertical */
-      background-size: 100% 100%; /* Ajustar la imagen al 100% del ancho y alto */
+      background-attachment: scroll;
+      background-size: cover;
+      overflow-y: auto;
     }
   }
   
