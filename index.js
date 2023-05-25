@@ -4,7 +4,7 @@ const planetContainers = document.querySelectorAll('.planet-container');
 // Añade un controlador de eventos a cada contenedor de planeta
 planetContainers.forEach((container) => {
   container.addEventListener('click', (event) => {
-    event.preventDefault();
+    event.stopPropagation(); // Evita que el evento se propague al documento
 
     // Oculta todas las descripciones de planetas
     const planetInfos = document.querySelectorAll('.planet-info');
@@ -28,5 +28,19 @@ planetContainers.forEach((container) => {
     const link = container.querySelector('a');
     const destination = link.getAttribute('href');
     window.location.href = destination;
+  });
+});
+
+// Añade un controlador de eventos al documento para ocultar las descripciones al hacer clic en cualquier otra parte
+document.addEventListener('click', (event) => {
+  // Oculta todas las descripciones de planetas
+  const planetInfos = document.querySelectorAll('.planet-info');
+  planetInfos.forEach((planetInfo) => {
+    planetInfo.style.display = 'none';
+  });
+
+  // Remueve la clase "zoomed" de todos los contenedores de planetas
+  planetContainers.forEach((container) => {
+    container.classList.remove('zoomed');
   });
 });
