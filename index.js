@@ -1,14 +1,23 @@
 // Obtiene todos los contenedores de planetas
 const planetContainers = document.querySelectorAll('.planet-container');
 
-// Añade un controlador de eventos a cada contenedor de planeta
+// Añade un controlador de eventos táctiles a cada contenedor de planeta
 planetContainers.forEach((container) => {
-  let clickCount = 0;
+  let touchStart = 0;
+  let touchEnd = 0;
 
-  container.addEventListener('click', (event) => {
+  container.addEventListener('touchstart', (event) => {
     event.stopPropagation(); // Evita que el evento se propague al documento
 
-    clickCount++;
+    touchStart = new Date().getTime();
+  });
+
+  container.addEventListener('touchend', (event) => {
+    event.stopPropagation(); // Evita que el evento se propague al documento
+
+    touchEnd = new Date().getTime();
+
+    const touchDuration = touchEnd - touchStart;
 
     // Oculta todas las descripciones de planetas
     const planetInfos = document.querySelectorAll('.planet-info');
@@ -21,13 +30,13 @@ planetContainers.forEach((container) => {
       container.classList.remove('zoomed');
     });
 
-    if (clickCount === 1) {
-      // Muestra la descripción y hace zoom en el planeta seleccionado
+    if (touchDuration < 300) {
+      // Muestra la descripción y hace zoom en el planeta seleccionado con un toque rápido
       container.classList.add('zoomed');
       const planetInfo = container.querySelector('.planet-info');
       planetInfo.style.display = 'block';
-    } else if (clickCount === 2) {
-      // Redirecciona al usuario a otra página al hacer doble clic
+    } else if (touchDuration >= 300 && touchDuration < 1000) {
+      // Redirecciona al usuario a otra página con un toque largo
       const link = container.querySelector('a');
       const destination = link.getAttribute('href');
       window.location.href = destination;
@@ -35,8 +44,11 @@ planetContainers.forEach((container) => {
   });
 });
 
-// Añade un controlador de eventos al documento para ocultar las descripciones al hacer clic en cualquier otra parte
-document.addEventListener('click', (event) => {
+// Añade un controlador de eventos al documento para ocultar las descripciones al hacer clic o tocar en cualquier otra parte
+document.addEventListener('click', hideDescriptions);
+document.addEventListener('touchstart', hideDescriptions);
+
+function hideDescriptions(event) {
   // Oculta todas las descripciones de planetas
   const planetInfos = document.querySelectorAll('.planet-info');
   planetInfos.forEach((planetInfo) => {
@@ -47,7 +59,4 @@ document.addEventListener('click', (event) => {
   planetContainers.forEach((container) => {
     container.classList.remove('zoomed');
   });
-
-  // Reinicia el contador de clics
-  clickCount = 0;
-});
+}
