@@ -3,8 +3,12 @@ const planetContainers = document.querySelectorAll('.planet-container');
 
 // Añade un controlador de eventos a cada contenedor de planeta
 planetContainers.forEach((container) => {
+  let clickCount = 0;
+
   container.addEventListener('click', (event) => {
     event.stopPropagation(); // Evita que el evento se propague al documento
+
+    clickCount++;
 
     // Oculta todas las descripciones de planetas
     const planetInfos = document.querySelectorAll('.planet-info');
@@ -17,17 +21,17 @@ planetContainers.forEach((container) => {
       container.classList.remove('zoomed');
     });
 
-    // Muestra la descripción y hace zoom en el planeta seleccionado
-    container.classList.add('zoomed');
-    const planetInfo = container.querySelector('.planet-info');
-    planetInfo.style.display = 'block';
-  });
-
-  container.addEventListener('dblclick', (event) => {
-    // Redirecciona al usuario a otra página al hacer doble clic
-    const link = container.querySelector('a');
-    const destination = link.getAttribute('href');
-    window.location.href = destination;
+    if (clickCount === 1) {
+      // Muestra la descripción y hace zoom en el planeta seleccionado
+      container.classList.add('zoomed');
+      const planetInfo = container.querySelector('.planet-info');
+      planetInfo.style.display = 'block';
+    } else if (clickCount === 2) {
+      // Redirecciona al usuario a otra página al hacer doble clic
+      const link = container.querySelector('a');
+      const destination = link.getAttribute('href');
+      window.location.href = destination;
+    }
   });
 });
 
@@ -43,4 +47,7 @@ document.addEventListener('click', (event) => {
   planetContainers.forEach((container) => {
     container.classList.remove('zoomed');
   });
+
+  // Reinicia el contador de clics
+  clickCount = 0;
 });
