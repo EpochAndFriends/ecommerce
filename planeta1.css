@@ -7,7 +7,7 @@ html, body {
   
   body {
     background-image: url("fuego seleccion.png");
-    background-size: cover;
+    background-size: 100% 100%; /* Ajustar la imagen al ancho y alto del contenedor */
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
