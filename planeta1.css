@@ -2,36 +2,17 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    overflow-x: auto;
-    overflow-y: hidden;
   }
   
   body {
     background-image: url("fuego seleccion.png");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  
-  @media (max-width: 767px) {
-    body {
-      background-attachment: scroll;
-      background-size: cover;
-      overflow-y: auto;
-    }
-  }
-  
-  .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    overflow: auto; /* Habilita el desplazamiento */
   }
   
   .selector {
@@ -39,57 +20,25 @@ html, body {
     width: 450px;
     height: 600px;
     border: 2px solid transparent;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
   }
   
   .selector1 {
     top: 500px;
-    left: 1550px;
+    left: 1288px;
   }
   
   .selector2 {
-    top: 500px;
-    left: 400px;
+    top: 400px;
+    left: 100px;
   }
   
   .selector3 {
-    top: 400px;
-    left: 920px;
-  }
-  
-  @media (max-width: 767px) {
-    .selector {
-      width: 80%;
-      height: auto;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .selector1 {
-      top: 30%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .selector2 {
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .selector3 {
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    top: 200px;
+    left: 660px;
   }
   
   .selector:hover {
-    border-color: #fff;
-    z-index: 2;
+    border-color: #fff; /* Color para resaltar el borde */
   }
   
   .overlay {
@@ -98,7 +47,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Color de superposición */
     z-index: 999;
     display: flex;
     align-items: center;
@@ -108,8 +57,7 @@ html, body {
   .content {
     background-color: #fff;
     padding: 20px;
-    width: 90%;
-    max-width: 600px;
+    max-width: 600px; /* Ajusta el ancho máximo del marco según tus necesidades */
     text-align: center;
   }
   
@@ -135,6 +83,8 @@ html, body {
     margin-top: 10px;
   }
   
+  
+  
   .description p {
     margin: 0;
     padding: 5px;
@@ -149,7 +99,7 @@ html, body {
   .buttons button {
     margin: 0 95px;
   }
-  
+
   .buttons {
     margin-top: 20px;
   }
@@ -168,30 +118,3 @@ html, body {
   .description .buttons .continue-button {
     order: 3;
   }
-  
-  @media (max-width: 600px) {
-    .content {
-      padding: 10px;
-    }
-  
-    .content img {
-      max-height: 200px;
-    }
-  
-    .description {
-      margin-top: 10px;
-    }
-  
-    .description p {
-      font-size: 14px;
-    }
-  
-    .buttons {
-      flex-direction: column;
-    }
-  
-    .buttons button {
-      margin: 5px;
-    }
-  }
-  
