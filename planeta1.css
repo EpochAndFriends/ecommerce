@@ -2,18 +2,18 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Desactivar el desplazamiento horizontal */
   }
   
   body {
     background-image: url("fuego seleccion.png");
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: scroll; /* Habilitar el desplazamiento horizontal */
-    overflow-y: hidden;
+    overflow-y: auto; /* Habilitar el desplazamiento vertical */
   }
   
   .selector {
@@ -120,7 +120,7 @@ html, body {
   
   @media (max-width: 600px) {
     body {
-      background-size: auto 100%;
+      background-size: 100% auto;
     }
   
     .selector {
@@ -148,3 +148,4 @@ html, body {
       transform: translateX(-50%);
     }
   }
+  
