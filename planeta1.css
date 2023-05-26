@@ -6,13 +6,14 @@ html, body {
   
   body {
     background-image: url("fuego seleccion.png");
-    background-size: cover;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: auto; /* Habilita el desplazamiento */
+    overflow-x: scroll; /* Habilitar el desplazamiento horizontal */
+    overflow-y: hidden;
   }
   
   .selector {
@@ -83,8 +84,6 @@ html, body {
     margin-top: 10px;
   }
   
-  
-  
   .description p {
     margin: 0;
     padding: 5px;
@@ -99,7 +98,7 @@ html, body {
   .buttons button {
     margin: 0 95px;
   }
-
+  
   .buttons {
     margin-top: 20px;
   }
@@ -117,4 +116,35 @@ html, body {
   
   .description .buttons .continue-button {
     order: 3;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      background-size: auto 100%;
+    }
+  
+    .selector {
+      width: 80%;
+      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .selector1 {
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .selector2 {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .selector3 {
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
