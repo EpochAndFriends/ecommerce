@@ -2,18 +2,19 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Desactivar el desplazamiento horizontal */
+    overflow-x: auto; /* Habilitar el desplazamiento horizontal */
+    overflow-y: auto; /* Habilitar el desplazamiento vertical */
   }
   
   body {
     background-image: url("fuego seleccion.png");
-    background-size: 100% 100%; /* Ajustar la imagen al ancho y alto del contenedor */
+    background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed; /* Fijar el fondo al desplazarse */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: auto; /* Habilitar el desplazamiento vertical */
   }
   
   .selector {
