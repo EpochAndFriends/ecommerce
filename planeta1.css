@@ -131,21 +131,22 @@ html, body {
     }
   
     .selector1 {
-      top: 30%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .selector2 {
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .selector3 {
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+        top: 500px;
+        left: 1288px;
+        transform: translateX(-50%);
+      }
+      
+      .selector2 {
+        top: 400px;
+        left: 100px;
+        transform: translateX(-50%);
+      }
+      
+      .selector3 {
+        top: 200px;
+        left: 660px;
+        transform: translateX(-50%);
+      }
+
   }
   
