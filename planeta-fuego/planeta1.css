@@ -1,22 +1,21 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Desactivar el desplazamiento horizontal */
-    overflow-y: auto; /* Habilitar el desplazamiento vertical */
-  }
-  
-  body {
-    position: static;
-    background-image: url("fuego seleccion.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-attachment: fixed; /* Fija la imagen de fondo en dispositivos móviles */
-  }
+html {
+  height: 100%;
+  overflow: auto; /* Habilitar el desplazamiento vertical y horizontal en la versión de escritorio */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("/imagenes/planetas/fuego/terrenos/fuego seleccion.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(0, 0, 0); /* Crear efecto de paralaje */
+}
   
   .selector {
     position: absolute;
@@ -123,9 +122,29 @@ html, body {
     order: 3;
   }
   
-  @media (min-width: 600px) {
+  @media (max-width: 600px) {
     body {
-      background-attachment: scroll; /* Habilitar el desplazamiento vertical en la versión de escritorio */
+      background-position: center left;
+    }
+  
+    .selector {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .selector1 {
+      top: 250px;
+      left: 644px;
+    }
+  
+    .selector2 {
+      top: 200px;
+      left: 50px;
+    }
+  
+    .selector3 {
+      top: 100px;
+      left: 330px;
     }
   }
   
