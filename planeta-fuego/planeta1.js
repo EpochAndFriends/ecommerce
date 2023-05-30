@@ -1,17 +1,17 @@
 function loadDescriptions() {
-    fetch('planeta1.json')
-      .then(response => response.json())
-      .then(descriptions => {
-        const selector1 = document.querySelector('.selector1');
-        const selector2 = document.querySelector('.selector2');
-        const selector3 = document.querySelector('.selector3');
-  
-        selector1.addEventListener('click', () => showOverlay('fuego-cueva.png', descriptions['fuego-cueva.png']));
-        selector2.addEventListener('click', () => showOverlay('fuego-playa.png', descriptions['fuego-playa.png']));
-        selector3.addEventListener('click', () => showOverlay('fuego-montaña.png', descriptions['fuego-montaña.png']));
-      })
-      .catch(error => console.log(error));
-  }
+  fetch('planeta1.json')
+    .then(response => response.json())
+    .then(descriptions => {
+      const selector1 = document.querySelector('.selector1');
+      const selector2 = document.querySelector('.selector2');
+      const selector3 = document.querySelector('.selector3');
+
+      selector1.addEventListener('click', () => showOverlay('fuego/terrenos/fuego-cueva.png', descriptions['fuego/terrenos/fuego-cueva.png']));
+      selector2.addEventListener('click', () => showOverlay('fuego/terrenos/fuego-playa.png', descriptions['fuego/terrenos/fuego-playa.png']));
+      selector3.addEventListener('click', () => showOverlay('fuego/terrenos/fuego-montaña.png', descriptions['fuego/terrenos/fuego-montaña.png']));
+    })
+    .catch(error => console.log(error));
+}
   
   function showOverlay(imageSrc, description) {
     const overlay = document.getElementById('overlay');
