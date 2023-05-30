@@ -37,7 +37,7 @@
   
   .planet-container:nth-child(3) {
     position: absolute;
-    top: 461px;
+    top: 361px;
     left: 1190px;
     max-width: 1px;
     max-height: 1px;
@@ -46,35 +46,35 @@
   
   .planet-container:nth-child(4) {
     position: absolute;
-    top: 461px;
+    top: 361px;
     left: 1190px;
     z-index: 1; /* Añade un índice de apilamiento */
   }
   
   .planet-container:nth-child(5) {
     position: absolute;
-    top: 650px;
+    top: 550px;
     left: 800px;
     z-index: 1; /* Añade un índice de apilamiento */
   }
   
   .planet-container:nth-child(6) {
     position: absolute;
-    top: 580px;
+    top: 480px;
     left: 1000px;
     z-index: 1; /* Añade un índice de apilamiento */
   }
   
   .planet-container:nth-child(7) {
     position: absolute;
-    top: 650px;
+    top: 550px;
     left: 520px;
     z-index: 1; /* Añade un índice de apilamiento */
   }
   
   .planet-container:nth-child(8) {
     position: absolute;
-    top: 461px;
+    top: 361px;
     left: 1190px;
     z-index: 1; /* Añade un índice de apilamiento */
   }
@@ -83,7 +83,7 @@
   /* Estilos para el contenedor de la Vía Láctea */
   .galaxy-container {
     position: absolute;
-    top: 170px;
+    top: 70px;
     left: 472px;
     overflow: hidden;
   }
@@ -102,3 +102,104 @@
     z-index: 2;
   }
   
+  @media (max-width: 600px) {
+    body {
+      background-position: center left;
+    }
+  
+    .selector {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .selector1 {
+      top: 350px;
+      left: 644px;
+    }
+  
+    .selector2 {
+      top: 280px;
+      left: 50px;
+    }
+  
+    .selector3 {
+      top: 190px;
+      left: 390px;
+    }
+  
+    .content {
+      max-width: 400px; /* Ajusta el ancho máximo del marco según tus necesidades */
+      padding: 10px;
+    }
+  
+    .content img {
+      max-height: 200px;
+      object-fit: contain; /* Ajusta la propiedad object-fit según tus necesidades */
+    }
+  
+    .description {
+      margin-top: 10px;
+      padding: 5px;
+      font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+  
+    .buttons {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .buttons button {
+      margin: 0 30px; /* Espacio reducido entre los botones */
+    }
+  
+    /* Estilos para los iconos de los planetas */
+    .planet-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    /* Estilos para el contenedor de información del planeta */
+    .planet-info {
+      top: -110px;
+      left: 60px;
+      width: 300px;
+      font-size: 12px;
+    }
+  
+    /* Estilos para los contenedores de los planetas */
+    .planet-container:nth-child(3) {
+      top: 501px;
+      left: 674px;
+    }
+  
+    .planet-container:nth-child(4) {
+      top: 501px;
+      left: 674px;
+    }
+  
+    .planet-container:nth-child(5) {
+      top: 410px;
+      left: 904px;
+    }
+  
+    .planet-container:nth-child(6) {
+      top: 580px;
+      left: 504px;
+    }
+  
+    .planet-container:nth-child(7) {
+      top: 620px;
+      left: 284px;
+    }
+  
+    .planet-container:nth-child(8) {
+      top: 861px;
+      left: 594px;
+    }
+  
+    /* Estilos para el contenedor de la Vía Láctea */
+    .galaxy-container {
+      top: 70px;
+      left: 172px;
+    }
+  }

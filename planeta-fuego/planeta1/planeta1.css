@@ -7,7 +7,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url("../imagenes/planetas/fuego/terrenos/fuego seleccion.png");
+  background-image: url("../../imagenes/planetas/fuego/terrenos/fuego seleccion.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -145,6 +145,31 @@ body {
     .selector3 {
       top: 190px;
       left: 390px;
+    }
+  
+    .content {
+      max-width: 400px; /* Ajusta el ancho máximo del marco según tus necesidades */
+      padding: 10px;
+    }
+  
+    .content img {
+      max-height: 200px;
+      object-fit: contain; /* Ajusta la propiedad object-fit según tus necesidades */
+    }
+  
+    .description {
+      margin-top: 10px;
+      padding: 5px;
+      font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+  
+    .buttons {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .buttons button {
+      margin: 0 30px; /* Espacio reducido entre los botones */
     }
   }
   
